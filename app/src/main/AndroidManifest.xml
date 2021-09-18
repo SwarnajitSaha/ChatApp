@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatsApp">
-        <activity android:name=".profileActivity"></activity>
+        <activity android:name=".UserProfileActivity"></activity>
+        <activity android:name=".AddFriendActivity" />
+        <activity android:name=".ChatListActivity" />
+        <activity android:name=".profileActivity" />
         <activity android:name=".OTPActivity" />
         <activity android:name=".phoneNumberActivity">
             <intent-filter>
