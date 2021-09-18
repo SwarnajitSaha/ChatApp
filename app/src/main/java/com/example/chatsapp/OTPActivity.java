@@ -94,7 +94,7 @@ public class OTPActivity extends AppCompatActivity {
                     @Override
                     public void onCodeSent(@NonNull @NotNull String s, @NonNull @NotNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
 
-                        //  super.onCodeSent(s, forceResendingToken);
+                         super.onCodeSent(s, forceResendingToken);
                         Toast.makeText(getApplicationContext(), "Code send to your device", Toast.LENGTH_LONG).show();
                         dialog.dismiss();
                         verifiedOTP = s;
@@ -110,8 +110,8 @@ public class OTPActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                          //  Intent intent=new Intent(OTPActivity.this,setUpProfileActivity.class);
-                           // startActivity(intent);
+                            Intent intent=new Intent(OTPActivity.this,profileActivity.class);
+                            startActivity(intent);
                             Toast.makeText(getApplicationContext(), "Verification Successful", Toast.LENGTH_LONG).show();
                         } else {
                             Toast.makeText(getApplicationContext(), "Sign in Code Error", Toast.LENGTH_LONG).show();
